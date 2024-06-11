@@ -63,7 +63,7 @@
       position: relative;
       display: flex;
       justify-content: center;
-      img {
+      svg {
         width: 100px;
         height: 100px;
       }
@@ -135,7 +135,7 @@
     .your-age {
       margin: 1rem auto;
       .heart {
-        img {
+        svg {
           width: 60px;
           height: 60px;
         }
@@ -194,7 +194,7 @@
     .your-age {
       margin: 1rem auto;
       .heart {
-        img {
+        svg {
           width: 54px;
           height: 54px;
         }
@@ -255,7 +255,7 @@
     .your-age {
       margin: .5rem auto;
       .heart {
-        img {
+        svg {
           width: 45px;
           height: 45px;
         }

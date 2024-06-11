@@ -1,0 +1,99 @@
+.your-age {
+  margin: 1.5rem auto;
+  .heart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+    span.your-age {
+      position: absolute;
+      top: 10%;
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+  }
+  p {
+    margin: 0.7rem 0;
+    font-size: 20px;
+    color: #052460;
+    line-height: 34px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  :host {
+    .your-age {
+      margin: 1rem auto;
+      .heart {
+        svg {
+          width: 60px;
+          height: 60px;
+        }
+        span.your-age {
+          top: 10%;
+          font-size: 23px;
+          line-height: 24px;
+        }
+      }
+      p {
+        margin: 0.5rem 0;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  :host {
+    .your-age {
+      margin: 1rem auto;
+      .heart {
+        svg {
+          width: 54px;
+          height: 54px;
+        }
+        span.your-age {
+          top: 5%;
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+      p {
+        margin: 0.2rem 0;
+        font-size: 11px;
+        line-height: 13px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 399px) {
+  :host {
+    .your-age {
+      margin: 0.5rem auto;
+      .heart {
+        svg {
+          width: 45px;
+          height: 45px;
+        }
+        span.your-age {
+          top: 3%;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      p {
+        margin: 0.2rem 0;
+        font-size: 11px;
+        line-height: 13px;
+      }
+    }
+  }
+}

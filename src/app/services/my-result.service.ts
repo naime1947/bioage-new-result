@@ -33,7 +33,7 @@ const data = [
     dateOfLatestImaging: new Date('2015-03-25'),
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
-    biologicalAge: 38,
+    biologicalAge: 51,
     healtRisk: {
       yourAge: {
         cardiovascular: 4.6,
@@ -53,7 +53,7 @@ const data = [
     dateOfLatestImaging: new Date('2015-01-26'),
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
-    biologicalAge: 68,
+    biologicalAge: 51,
     healtRisk: {
       yourAge: {
         cardiovascular: 4.6,
@@ -73,7 +73,7 @@ const data = [
     dateOfLatestImaging: new Date('2015-02-27'),
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
-    biologicalAge: 68,
+    biologicalAge: 51,
     healtRisk: {
       yourAge: {
         cardiovascular: 4.6,
@@ -93,7 +93,7 @@ const data = [
     dateOfLatestImaging: new Date('2015-04-05'),
     nextAssessmentDate: new Date('2023-09-16T12:00:00Z'),
     choronologicalAge: 51,
-    biologicalAge: 68,
+    biologicalAge: 61,
     healtRisk: {
       yourAge: {
         cardiovascular: 4.6,

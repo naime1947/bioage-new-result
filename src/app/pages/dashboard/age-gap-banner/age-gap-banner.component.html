@@ -3,7 +3,14 @@
     <div [@flyInDown] [@heartBeat] *ngIf="ageDifference == 0" class="your-age">
       <p class="text-center">Your BioAge</p>
       <div class="heart">
-        <img src="/assets/img/Green-Heart.png" alt="" />
+        <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_431_2573" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="102" height="102">
+          <path d="M0.732185 101.558L101.837 101.558L101.837 0.452644L0.732185 0.452644L0.732185 101.558Z" fill="white"/>
+          </mask>
+          <g mask="url(#mask0_431_2573)">
+          <path d="M101.837 27.8956C101.837 66.202 51.2847 101.558 51.2847 101.558C51.2847 101.558 0.732185 65.6139 0.732185 27.8956C0.732185 12.7439 12.6917 0.452644 27.4361 0.452644C37.8774 0.452644 46.9463 6.65106 51.2847 15.6445C55.6231 6.65106 64.6919 0.452644 75.1332 0.452644C89.8777 0.452644 101.837 12.7439 101.837 27.8956Z" fill="#92c83e"/>
+          </g>
+          </svg>
         <span class="your-age">{{ yourBioAge }}</span>
       </div>
     </div>
@@ -14,6 +21,7 @@
           *ngIf="ageDifference != 0"
           [style.opacity]="ageDifference <= -3 ? 1 : 0"
           [yourBioAge]="yourBioAge"
+          color="#92c83e"
         ></app-heart>
 
         <div class="brick bg-1" [@slideInLeft]></div>
@@ -23,6 +31,7 @@
           *ngIf="ageDifference != 0"
           [style.opacity]="ageDifference == -2 ? 1 : 0"
           [yourBioAge]="yourBioAge"
+          color="#92c83e"
         ></app-heart>
 
         <div class="brick bg-2" [@slideInLeft]></div>
@@ -32,6 +41,7 @@
           *ngIf="ageDifference != 0"
           [style.opacity]="ageDifference == -1 ? 1 : 0"
           [yourBioAge]="yourBioAge"
+          color="#92c83e"
         ></app-heart>
         <div class="brick bg-3" [@slideInLeft]></div>
       </div>
@@ -40,6 +50,7 @@
           *ngIf="ageDifference != 0"
           [style.opacity]="ageDifference == 1 ? 1 : 0"
           [yourBioAge]="yourBioAge"
+          color="#ef3e2d"
         ></app-heart>
 
         <div class="brick bg-4" [@slideInLeft]></div>
@@ -49,6 +60,7 @@
           *ngIf="ageDifference != 0"
           [style.opacity]="ageDifference == 2 ? 1 : 0"
           [yourBioAge]="yourBioAge"
+          color="#ef3e2d"
         ></app-heart>
 
         <div class="brick bg-5" [@slideInLeft]></div>
@@ -58,6 +70,7 @@
           *ngIf="ageDifference != 0"
           [style.opacity]="ageDifference >= 3 ? 1 : 0"
           [yourBioAge]="yourBioAge"
+          color="#ef3e2d"
         ></app-heart>
         <div class="brick bg-6" [@slideInLeft]></div>
       </div>
@@ -69,7 +82,9 @@
       class="your-age"
     >
       <div class="heart">
-        <img src="/assets/img/Blue-Heart.png" alt="" />
+        <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.08078 74.1039C0.08078 35.7975 50.6333 0.441895 50.6333 0.441895C50.6333 0.441895 101.186 36.3856 101.186 74.1039C101.186 89.2556 89.2263 101.547 74.4818 101.547C64.0405 101.547 54.9716 95.3484 50.6333 86.355C46.2949 95.3484 37.226 101.547 26.7847 101.547C12.0402 101.547 0.08078 89.2556 0.08078 74.1039Z" fill="#1C4DA1"/>
+          </svg>
         <span class="your-age">{{ yourAge }}</span>
       </div>
       <p class="text-center">Your age</p>

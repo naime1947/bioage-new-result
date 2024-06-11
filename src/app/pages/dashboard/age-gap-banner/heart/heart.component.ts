@@ -23,5 +23,5 @@ import { heartBeat } from '../../../../shared/animation';
 })
 export class HeartComponent {
   @Input() yourBioAge = 0;
-
+  @Input() color = "#92c83e";
 }

@@ -1,7 +1,17 @@
 <div [@flyInDown] [@heartBeat] class="your-age">
   <p class="text-center">Your BioAge</p>
   <div class="heart">
-    <img src="/assets/img/Green-Heart.png" alt="" />
+    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0_431_2573" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="102" height="102">
+      <path d="M0.732185 101.558L101.837 101.558L101.837 0.452644L0.732185 0.452644L0.732185 101.558Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask0_431_2573)">
+      <path d="M101.837 27.8956C101.837 66.202 51.2847 101.558 51.2847 101.558C51.2847 101.558 0.732185 65.6139 0.732185 27.8956C0.732185 12.7439 12.6917 0.452644 27.4361 0.452644C37.8774 0.452644 46.9463 6.65106 51.2847 15.6445C55.6231 6.65106 64.6919 0.452644 75.1332 0.452644C89.8777 0.452644 101.837 12.7439 101.837 27.8956Z"
+
+      [attr.fill]="color"/>
+      </g>
+      </svg>
+
     <span class="your-age">{{ yourBioAge }}</span>
   </div>
 </div>
