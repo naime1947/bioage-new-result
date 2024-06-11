@@ -1,0 +1,164 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img src="/assets/img/BioAge Logo-Blue.png"
+    /></a>
+
+    <div class="btn-group mobile-elements" dropdown>
+      <app-language-switcher></app-language-switcher>
+      <img
+        class="brand"
+        src="/assets/svg/hamburger.svg"
+        alt=""
+        dropdownToggle
+      />
+      <app-mobile-menu *dropdownMenu class="dropdown-menu mobile-menu-wrapper">
+      </app-mobile-menu>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+      <div class="btn-group" dropdown [insideClick]="true">
+        <div class="icon-with-text-wrapper me-4" dropdownToggle>
+          <img class="icon" src="/assets/svg/help-circle.svg" alt="search" />
+          <span class="text" i18n>Help</span>
+        </div>
+        <ul *dropdownMenu class="dropdown-menu regular-dropdown-menu">
+          <li i18n>
+            FaQs
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+          <li i18n>
+            More about BioAge
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+          <li
+            (mouseenter)="isCollapsed = !isCollapsed"
+            (mouseleave)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseBasic"
+            i18n
+          >
+            Concerned about your BioAge?
+            <img
+              class="icon ms-2"
+              src="/assets/svg/chevron-{{ isCollapsed ? 'right' : 'down' }}.svg"
+            />
+            <div [collapse]="isCollapsed" [isAnimated]="true">
+              <p>
+                If you are concerned about your health or wellness, you should
+                attend an appointment with a healthcare professional. BioAge is
+                a new technology that many people will not have heard of yet,
+                even in the medical community. If you want to discuss this
+                report with a healthcare professional, we recommend you download
+                the fact sheet to show them.
+              </p>
+            </div>
+          </li>
+
+          <li i18n>
+            Technical support
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="btn-group" dropdown [insideClick]="true">
+        <div class="icon-with-text-wrapper me-4" dropdownToggle>
+          <img class="icon" src="/assets/svg/feather.svg" alt="search" />
+          <span class="text" i18n>Legal</span>
+        </div>
+        <ul *dropdownMenu class="dropdown-menu regular-dropdown-menu">
+          <li>
+            Disclaimer
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+          <li i18n>
+            Terms and Conditions
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+          <li i18n>
+            Privacy Policy
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+          <li i18n>
+            Terms of Service
+            <a href="#" target="_blank">
+              <img
+                class="icon ms-2"
+                src="/assets/svg/external-link.svg"
+                alt="externallink"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group" dropdown [insideClick]="false">
+        <div class="icon-user-profile" dropdownToggle>
+          <img class="icon" src="/assets/svg/user.svg" alt="search" />
+        </div>
+        <ul
+          *dropdownMenu
+          class="dropdown-menu regular-dropdown-menu my-profile-dropdown"
+        >
+          <li routerLink="/my-profile" [routerLinkActive]="'active'" i18n>
+            <img
+              class="icon"
+              style="margin-left: -10px"
+              src="/assets/svg/user-outline.svg"
+              alt="externallink"
+            />
+            My Profile
+          </li>
+          <li (click)="logout()">
+            <img
+              class="icon"
+              style="margin-right: 10px"
+              src="/assets/svg/log-out.svg"
+              alt="externallink"
+            />
+            <span class="sign-out" i18n>Sign out</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<app-desktop-menu class="desktop-menu-wrapper"></app-desktop-menu>

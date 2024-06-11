@@ -1,0 +1,47 @@
+:host {
+  width: 310px;
+  margin-left: -205px;
+  margin-top: 5px;
+  border: none;
+  padding: 20px;
+  background: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(104, 104, 104, 0.25);
+  border-radius: 8px;
+}
+
+::ng-deep {
+  .mobile-menu-wrapper {
+    .wrapper {
+      border-bottom: 1px solid var(--color-border);
+    }
+    app-menu-items {
+      li {
+        list-style: none;
+        padding: 20px 0px;
+
+        app-dashboard-svg,
+        app-my-result-svg,
+        app-action-svg {
+          svg path {
+            fill: var(--color-secondary);
+          }
+        }
+
+        app-the-science-svg,
+        app-disclaimers-svg {
+          svg path {
+            stroke: var(--color-secondary);
+          }
+        }
+
+        .text {
+          font-size: 20px;
+        }
+        svg {
+          width: 40px;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}

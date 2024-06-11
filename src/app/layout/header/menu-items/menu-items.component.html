@@ -1,0 +1,61 @@
+<li routerLink="/dashboard" routerLinkActive="active">
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-dashboard-svg></app-dashboard-svg>
+      <span class="text" i18n>Dashboard</span>
+    </div>
+  </a>
+</li>
+<!-- <li routerLink="/my-results" routerLinkActive="active">
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-my-result-svg></app-my-result-svg>
+      <span class="text" i18n>My Results</span>
+    </div>
+  </a>
+</li>
+<li routerLink="/actions" routerLinkActive="active">
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-action-svg></app-action-svg>
+      <span class="text" i18n>Actions / What to do</span>
+    </div>
+  </a>
+</li>
+<li routerLink="/the-science" routerLinkActive="active">
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-the-science-svg></app-the-science-svg>
+      <span class="text" i18n>The Science</span>
+    </div>
+  </a>
+</li>
+<li routerLink="/desclaimers" routerLinkActive="active">
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-disclaimers-svg></app-disclaimers-svg>
+      <span class="text" i18n>Disclaimers</span>
+    </div>
+  </a>
+</li> -->
+
+<li
+  routerLink="/my-profile"
+  routerLinkActive="active"
+  class="border-top mobile-specific"
+>
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-user-svg></app-user-svg>
+      <span class="text" i18n> My Profile </span>
+    </div>
+  </a>
+</li>
+<li (click)="logout()" class="border-top mobile-specific">
+  <a
+    ><div class="icon-with-text-wrapper">
+      <app-sign-out-svg></app-sign-out-svg>
+      <span class="text sign-out" i18n> Sign out</span>
+    </div>
+  </a>
+</li>

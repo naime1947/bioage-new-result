@@ -1,0 +1,103 @@
+<div class="wrapper">
+  <div class="slider">
+    <div [@flyInDown] [@heartBeat] *ngIf="ageDifference == 0" class="your-age">
+      <p class="text-center">Your BioAge</p>
+      <div class="heart">
+        <img src="/assets/img/Green-Heart.png" alt="" />
+        <span class="your-age">{{ yourBioAge }}</span>
+      </div>
+    </div>
+
+    <div class="block-wrapper">
+      <div class="each-block">
+        <app-heart
+          *ngIf="ageDifference != 0"
+          [style.opacity]="ageDifference <= -3 ? 1 : 0"
+          [yourBioAge]="yourBioAge"
+        ></app-heart>
+
+        <div class="brick bg-1" [@slideInLeft]></div>
+      </div>
+      <div class="each-block">
+        <app-heart
+          *ngIf="ageDifference != 0"
+          [style.opacity]="ageDifference == -2 ? 1 : 0"
+          [yourBioAge]="yourBioAge"
+        ></app-heart>
+
+        <div class="brick bg-2" [@slideInLeft]></div>
+      </div>
+      <div class="each-block">
+        <app-heart
+          *ngIf="ageDifference != 0"
+          [style.opacity]="ageDifference == -1 ? 1 : 0"
+          [yourBioAge]="yourBioAge"
+        ></app-heart>
+        <div class="brick bg-3" [@slideInLeft]></div>
+      </div>
+      <div class="each-block">
+        <app-heart
+          *ngIf="ageDifference != 0"
+          [style.opacity]="ageDifference == 1 ? 1 : 0"
+          [yourBioAge]="yourBioAge"
+        ></app-heart>
+
+        <div class="brick bg-4" [@slideInLeft]></div>
+      </div>
+      <div class="each-block">
+        <app-heart
+          *ngIf="ageDifference != 0"
+          [style.opacity]="ageDifference == 2 ? 1 : 0"
+          [yourBioAge]="yourBioAge"
+        ></app-heart>
+
+        <div class="brick bg-5" [@slideInLeft]></div>
+      </div>
+      <div class="each-block">
+        <app-heart
+          *ngIf="ageDifference != 0"
+          [style.opacity]="ageDifference >= 3 ? 1 : 0"
+          [yourBioAge]="yourBioAge"
+        ></app-heart>
+        <div class="brick bg-6" [@slideInLeft]></div>
+      </div>
+    </div>
+
+    <div
+      [@flyInUp]
+      [@heartBeat]
+      class="your-age"
+    >
+      <div class="heart">
+        <img src="/assets/img/Blue-Heart.png" alt="" />
+        <span class="your-age">{{ yourAge }}</span>
+      </div>
+      <p class="text-center">Your age</p>
+    </div>
+  </div>
+
+  <div
+    [@flipInX]
+    class="content"
+    [ngClass]="{
+      'bg-1': ageDifference < 0,
+      'bg-6': ageDifference > 0
+
+    }"
+  >
+    <div class="summary">
+      <p>Your results show a difference of</p>
+      <div class="age-difference">
+        <span *ngIf="ageDifference < 0">-</span>
+        <span *ngIf="ageDifference > 0">+</span>{{ ageDifferenceAbs }} year{{
+          ageDifference != 0 && ageDifference != 1 && ageDifference != -1
+            ? "s"
+            : ""
+        }}
+      </div>
+    </div>
+    <div class="description">
+      <p>{{ description }}</p>
+    </div>
+  </div>
+</div>

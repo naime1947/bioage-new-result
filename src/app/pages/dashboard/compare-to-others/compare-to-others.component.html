@@ -1,0 +1,48 @@
+<div class="section">
+  <h2 class="section-title">How do you compare to others?</h2>
+  <p class="section-description">
+    Your BioAge is higher than X% of others of your sex and chronological age.
+  </p>
+  <div class="wrapper">
+    <div class="img-wrapper">
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 1}">
+        <app-girl-svg [color]="'#92C83E'" [width]="(selectedGrilNum == 1) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 2}">
+        <app-girl-svg [color]="'#92C83E'" [width]="(selectedGrilNum == 2) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 3}">
+        <app-girl-svg [color]="'#9BC31CA6'" [width]="(selectedGrilNum == 3) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 4}">
+        <app-girl-svg [color]="'#9BC31CA6'" [width]="(selectedGrilNum == 4) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 5}">
+        <app-girl-svg [color]="'#9BC31C66'" [width]="(selectedGrilNum == 5) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 6}">
+        <app-girl-svg [color]="'#FBAD1880'" [width]="(selectedGrilNum == 6) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 7}">
+        <app-girl-svg [color]="'#FBAD18'" [width]="(selectedGrilNum == 7) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container" [ngClass]="{'selected': selectedGrilNum == 8}">
+        <app-girl-svg [color]="'#FBAD18'" [width]="(selectedGrilNum == 8) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container selected" [ngClass]="{'selected': selectedGrilNum == 9}">
+        <app-girl-svg [color]="'#EF3E2D'" [width]="(selectedGrilNum == 9) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+      <div class="img-container " [ngClass]="{'selected': selectedGrilNum == 10}">
+        <app-girl-svg [color]="'#EF3E2D'" [width]="(selectedGrilNum == 10) ? selectedGirlWidth : girlWidth"></app-girl-svg>
+      </div>
+    </div>
+
+    <div class="slider-wrapper">
+      <ngx-slider [(value)]="selectedGrilNum" [options]="options"></ngx-slider>
+
+    </div>
+
+  </div>
+</div>
+
+

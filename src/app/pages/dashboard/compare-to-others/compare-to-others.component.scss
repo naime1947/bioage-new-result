@@ -1,0 +1,180 @@
+.section {
+  background-color: var(--color-section-bg);
+  border-radius: 9px;
+  padding: 1rem 3rem 5rem 3rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-wrapper {
+  display: flex;
+}
+
+.img-container {
+  height: 218px;
+  width: 83px;
+  margin: 0 10px;
+
+  display: flex;
+  align-items: center;
+  &.selected {
+    width: 105px;
+  }
+}
+
+.slider-wrapper {
+  width: 970px;
+  //margin-left: -12px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .section {
+  }
+
+  .img-container {
+    height: 100px;
+    width: 48px;
+    margin: 0 5px;
+
+    display: flex;
+    align-items: center;
+    &.selected {
+      width: 60px;
+    }
+  }
+
+  .slider-wrapper {
+    width: 550px;
+    //margin-left: -12px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section {
+    padding: 0.5rem 1rem 3rem 1rem;
+  }
+
+  .img-container {
+    height: 64px;
+    width: 23px;
+    margin: 0 4px;
+
+    display: flex;
+    align-items: center;
+    &.selected {
+      width: 30px;
+    }
+  }
+
+  .slider-wrapper {
+    width: 300px;
+  }
+
+}
+
+
+
+
+
+// We need to use ::ng-deep to overcome view encapsulation
+::ng-deep {
+  .slider-wrapper .ngx-slider .ngx-slider-bar {
+    background: #052460;
+    height: 3px;
+  }
+
+  .slider-wrapper .ngx-slider .ngx-slider-pointer {
+    width: 26px;
+    height: 28px;
+    top: 12px; /* to remove the default positioning */
+    bottom: 0;
+    background: none;
+    // border-top-left-radius: 3px;
+    // border-top-right-radius: 3px;
+    background-image: url("/assets/img/slider-pointer.png");
+    background-repeat: no-repeat;
+  }
+  .slider-wrapper .ngx-slider .ngx-slider-pointer:after {
+    display: none;
+  }
+  .slider-wrapper .ngx-slider .ngx-slider-tick {
+    width: 15px;
+    height: 15px;
+    margin-left: 0px;
+    border-radius: 50%;
+    background: #052460;
+    top: -4px;
+    &:nth-child(1) {
+      //margin-left: 14px;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+      display: none;
+    }
+    &:nth-child(10) {
+      margin-left: 14px;
+    }
+  }
+
+  .slider-wrapper
+    .ngx-slider-span.ngx-slider-bubble.ngx-slider-model-value
+    > b {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+
+    color: #052460;
+    position: relative;
+    top: 80px;
+
+  }
+
+  @media screen and (max-width: 575px) {
+    .slider-wrapper .ngx-slider{
+      margin: 0;
+    }
+
+    .slider-wrapper .ngx-slider .ngx-slider-bar {
+      height: 1px;
+    }
+
+    .slider-wrapper .ngx-slider .ngx-slider-pointer {
+      width: 26px;
+      height: 10px;
+      top: 6px; /* to remove the default positioning */
+    }
+
+
+    .slider-wrapper .ngx-slider .ngx-slider-tick {
+      width: 8px;
+      height: 8px;
+      top: -1px;
+      &:nth-child(1) {
+        //margin-left: 14px;
+      }
+      &:nth-child(10) {
+        margin-left: 18px;
+      }
+    }
+
+    .slider-wrapper
+      .ngx-slider-span.ngx-slider-bubble.ngx-slider-model-value
+      > b {
+      font-size: 12px;;
+      top: 60px;
+
+    }
+  }
+}

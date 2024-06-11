@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { setTheme } from 'ngx-bootstrap/utils';
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +11,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'bioage-new-result';
+  constructor() {
+    setTheme('bs5');
+  }
 }

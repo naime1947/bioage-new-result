@@ -1,0 +1,101 @@
+nav {
+  height: 78px;
+  width: 100%;
+  background-color: #fff !important;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-expand-lg {
+  flex-wrap: wrap;
+}
+
+.icon-user-profile {
+  cursor: pointer;
+}
+
+.my-profile-dropdown {
+  margin-left: -100%;
+  li {
+    cursor: pointer;
+  }
+  .sign-out {
+    color: #b2b2b2;
+  }
+}
+
+app-language-switcher{
+  margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+  app-desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-elements {
+    display: none;
+  }
+}
+
+::ng-deep {
+  .mobile-menu-wrapper,
+  .desktop-menu-wrapper {
+    li:hover {
+      .text {
+        color: var(--color-secondary);
+      }
+      app-dashboard-svg,
+      app-my-result-svg,
+      app-action-svg {
+        svg path {
+          fill: var(--color-secondary);
+        }
+      }
+
+      app-the-science-svg{
+        svg path {
+          stroke: var(--color-secondary);
+          fill: var(--color-secondary);
+        }
+      }
+      app-disclaimers-svg {
+        svg path {
+          stroke: var(--color-secondary);
+        }
+      }
+    }
+    svg {
+      margin-right: 12px;
+    }
+    app-dashboard-svg svg path {
+      fill: var(--color-primary);
+    }
+  }
+  .active {
+    .text {
+      color: var(--color-secondary) !important;
+    }
+
+    app-dashboard-svg,
+    app-my-result-svg,
+    app-action-svg {
+      svg path {
+        fill: var(--color-secondary);
+      }
+    }
+
+    app-the-science-svg{
+      svg path {
+        stroke: var(--color-secondary);
+        fill: var(--color-secondary);
+      }
+    }
+    app-disclaimers-svg {
+      svg path {
+        stroke: var(--color-secondary);
+      }
+    }
+  }
+}

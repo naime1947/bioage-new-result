@@ -1,0 +1,14 @@
+.icon-with-text-wrapper{
+  cursor: pointer;
+  display: flex;
+  .icon{
+    margin-right: 5px;
+  }
+  .text{
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--color-primary);
+  }
+}
