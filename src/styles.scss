@@ -24,7 +24,7 @@
   // COLORS
   --color-primary: #052460;
   --color-primary-light: #1C4DA1;
-  ;
+
   --color-secondary: #EF3E2D;
   --color-border: #e3e3e3;
   --color-body: #fafafa;
@@ -39,8 +39,15 @@
 @import "assets/scss/form-elements.scss";
 @import "assets/scss/chart.scss";
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-body{
+html, body{
+  height: 100%;
+  width: 100%;
   background-color: var(--color-body);
   background-color: #fff;
 }

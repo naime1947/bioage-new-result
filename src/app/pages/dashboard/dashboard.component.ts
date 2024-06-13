@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { UserModel } from '../../models/user.model';
 import { AuthService } from '../../services/auth.service';
@@ -15,6 +15,7 @@ import { ImproveBioageComponent } from './improve-bioage/improve-bioage.componen
 import { NextBioageComponent } from './next-bioage/next-bioage.component';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { slideInLeft, slideInRight } from '../../shared/animation';
+import { HowVideoComponent } from './how-video/how-video.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -28,21 +29,12 @@ import { slideInLeft, slideInRight } from '../../shared/animation';
     WellnessExamComponent,
     ImproveBioageComponent,
     NextBioageComponent,
+    HowVideoComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
-  animations: [
-    trigger(`fadeIn`, [
-      transition('void => *', [
-        style({ opacity: 0 }),
-        animate(`800ms 0ms ease-in`, style({ opacity: 1 })),
-      ]),
-    ]),
-    slideInLeft(1000, 0),
-    slideInRight(1000, 100),
-  ],
 })
-export class DashboardComponent {
+export class DashboardComponent implements AfterViewInit {
   user: UserModel | null;
   latestAssessmentResult!: AssessmentResultModel;
   result: any;
@@ -69,6 +61,11 @@ export class DashboardComponent {
     // setInterval(()=> {
     //   this.yourBioAge = this.getRandomInt(49, 57)
     // }, 5000)
+  }
+
+
+  ngAfterViewInit(): void {
+
   }
 
   getRandomInt(min: number, max: number) {
