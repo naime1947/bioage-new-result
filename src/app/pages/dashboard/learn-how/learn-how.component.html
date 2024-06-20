@@ -1,0 +1,13 @@
+<div class="section">
+  <h2 class="section-title"> Learn how to improve your BioAge</h2>
+  <p class="subtitle"> Small changes can make a big difference</p>
+  <div class="btn-wrapper">
+
+    <button (click)="selectedBtn = btnEnum.ImproveYourDiet" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.ImproveYourDiet}">Imporove your diet</button>
+    <button (click)="selectedBtn = btnEnum.ManageStress" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.ManageStress}">Manage stress</button>
+    <button (click)="selectedBtn = btnEnum.LoseWeight" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.LoseWeight}">Lose weight</button>
+    <button (click)="selectedBtn = btnEnum.LifeStyleTips" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.LifeStyleTips}">Lifestyle tips</button>
+    <button (click)="selectedBtn = btnEnum.Medications" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.Medications}">Medications</button>
+    <button (click)="selectedBtn = btnEnum.QuitSmocking" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.QuitSmocking}">Quit smoking</button>
+  </div>
+</div>

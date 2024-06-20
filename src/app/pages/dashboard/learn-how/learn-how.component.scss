@@ -1,0 +1,51 @@
+.section {
+  padding: 2.5rem 0 2.5rem 0;
+
+  .section-title {
+    max-width: 770px;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 76px;
+    letter-spacing: -3px;
+    color: #fff;
+  }
+
+  .subtitle {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #fff;
+  }
+
+  .btn-wrapper{
+    margin: 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  button.rounded {
+    height: 55px;
+    padding: 10px 30px;
+    text-transform: none;
+    background-color: #fff;
+    color: #052460;
+    font-size: 24px;
+    font-weight: 700;
+    outline: 0;
+    border: none;
+
+    border-radius: 30px !important;
+
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+
+  button.selected {
+    background-color: #0088c5;
+    color: #fff;
+  }
+}

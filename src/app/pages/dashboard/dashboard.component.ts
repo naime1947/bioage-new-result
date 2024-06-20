@@ -16,6 +16,7 @@ import { NextBioageComponent } from './next-bioage/next-bioage.component';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { slideInLeft, slideInRight } from '../../shared/animation';
 import { HowVideoComponent } from './how-video/how-video.component';
+import { LearnHowComponent } from './learn-how/learn-how.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,7 +30,8 @@ import { HowVideoComponent } from './how-video/how-video.component';
     WellnessExamComponent,
     ImproveBioageComponent,
     NextBioageComponent,
-    HowVideoComponent
+    HowVideoComponent,
+    LearnHowComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
