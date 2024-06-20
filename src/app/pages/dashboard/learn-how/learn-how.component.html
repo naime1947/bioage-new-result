@@ -1,13 +1,49 @@
 <div class="section">
-  <h2 class="section-title"> Learn how to improve your BioAge</h2>
-  <p class="subtitle"> Small changes can make a big difference</p>
+  <h2 class="section-title">Learn how to improve your BioAge</h2>
+  <p class="subtitle">Small changes can make a big difference</p>
   <div class="btn-wrapper">
-    <button (click)="selectedBtn = btnEnum.ImproveYourDiet" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.ImproveYourDiet}">Imporove your diet</button>
-    <button (click)="selectedBtn = btnEnum.ManageStress" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.ManageStress}">Manage stress</button>
-    <button (click)="selectedBtn = btnEnum.LoseWeight" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.LoseWeight}">Lose weight</button>
-    <button (click)="selectedBtn = btnEnum.LifeStyleTips" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.LifeStyleTips}">Lifestyle tips</button>
-    <button (click)="selectedBtn = btnEnum.Medications" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.Medications}">Medications</button>
-    <button (click)="selectedBtn = btnEnum.QuitSmocking" class="btn rounded" [ngClass]="{'selected': selectedBtn == btnEnum.QuitSmocking}">Quit smoking</button>
+    <button
+      (click)="selectedBtn = btnEnum.ImproveYourDiet"
+      class="btn rounded"
+      [ngClass]="{ selected: selectedBtn == btnEnum.ImproveYourDiet }"
+    >
+      Imporove your diet
+    </button>
+    <button
+      (click)="selectedBtn = btnEnum.ManageStress"
+      class="btn rounded"
+      [ngClass]="{ selected: selectedBtn == btnEnum.ManageStress }"
+    >
+      Manage stress
+    </button>
+    <button
+      (click)="selectedBtn = btnEnum.LoseWeight"
+      class="btn rounded"
+      [ngClass]="{ selected: selectedBtn == btnEnum.LoseWeight }"
+    >
+      Lose weight
+    </button>
+    <button
+      (click)="selectedBtn = btnEnum.LifeStyleTips"
+      class="btn rounded"
+      [ngClass]="{ selected: selectedBtn == btnEnum.LifeStyleTips }"
+    >
+      Lifestyle tips
+    </button>
+    <button
+      (click)="selectedBtn = btnEnum.Medications"
+      class="btn rounded"
+      [ngClass]="{ selected: selectedBtn == btnEnum.Medications }"
+    >
+      Medications
+    </button>
+    <button
+      (click)="selectedBtn = btnEnum.QuitSmocking"
+      class="btn rounded"
+      [ngClass]="{ selected: selectedBtn == btnEnum.QuitSmocking }"
+    >
+      Quit smoking
+    </button>
   </div>
 
   <div class="video-wrapper">
@@ -15,46 +51,88 @@
     <div class="videos">
       <div class="each-video">
         <a href="https://youtube.com/" class="video">
-          <img src="/assets/img/play.png" alt="" class="play">
-          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail"/>
+          <img src="/assets/img/play.png" alt="" class="play" />
+          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail" />
           <h4 class="video-title">Video title</h4>
         </a>
       </div>
       <div class="each-video">
         <a href="https://youtube.com/" class="video">
-          <img src="/assets/img/play.png" alt="" class="play">
-          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail"/>
+          <img src="/assets/img/play.png" alt="" class="play" />
+          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail" />
           <h4 class="video-title">Video title</h4>
         </a>
       </div>
       <div class="each-video">
         <a href="https://youtube.com/" class="video">
-          <img src="/assets/img/play.png" alt="" class="play">
-          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail"/>
+          <img src="/assets/img/play.png" alt="" class="play" />
+          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail" />
           <h4 class="video-title">Video title</h4>
         </a>
       </div>
       <div class="each-video">
         <a href="https://youtube.com/" class="video">
-          <img src="/assets/img/play.png" alt="" class="play">
-          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail"/>
+          <img src="/assets/img/play.png" alt="" class="play" />
+          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail" />
           <h4 class="video-title">Video title</h4>
         </a>
       </div>
       <div class="each-video">
         <a href="https://youtube.com/" class="video">
-          <img src="/assets/img/play.png" alt="" class="play">
-          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail"/>
+          <img src="/assets/img/play.png" alt="" class="play" />
+          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail" />
           <h4 class="video-title">Video title</h4>
         </a>
       </div>
       <div class="each-video">
         <a href="https://youtube.com/" class="video">
-          <img src="/assets/img/play.png" alt="" class="play">
-          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail"/>
+          <img src="/assets/img/play.png" alt="" class="play" />
+          <img src="/assets/img/thumbnail.png" alt="" class="thumbnail" />
           <h4 class="video-title">Video title</h4>
         </a>
       </div>
     </div>
+  </div>
+
+  <div class="article-wrapper">
+    <div class="each-article">
+      <h4 class="article-title">Article name</h4>
+      <p class="description">
+        What should your heart rate be when working out, and how can you keep
+        track of it? Our simple...
+      </p>
+      <button class="btn rounded">Read article</button>
+    </div>
+    <div class="each-article">
+      <h4 class="article-title">Article name</h4>
+      <p class="description">
+        What should your heart rate be when working out, and how can you keep
+        track of it? Our simple...
+      </p>
+      <button class="btn rounded">Read article</button>
+    </div>
+    <div class="each-article">
+      <h4 class="article-title">Article name</h4>
+      <p class="description">
+        What should your heart rate be when working out, and how can you keep
+        track of it? Our simple...
+      </p>
+      <button class="btn rounded">Read article</button>
+    </div>
+    <div class="each-article">
+      <h4 class="article-title">Article name</h4>
+      <p class="description">
+        What should your heart rate be when working out, and how can you keep
+        track of it? Our simple...
+      </p>
+      <button class="btn rounded">Read article</button>
+    </div>
+  </div>
+
+  <div class="next-section">
+    <a href="">Next section: Manage stress</a> <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27.8273 10.4747C28.3155 9.98655 28.3155 9.19509 27.8273 8.70694L19.8724 0.751987C19.3842 0.263832 18.5928 0.263832 18.1046 0.751987C17.6164 1.24014 17.6164 2.0316 18.1046 2.51975L25.1757 9.59082L18.1046 16.6619C17.6164 17.15 17.6164 17.9415 18.1046 18.4297C18.5928 18.9178 19.3842 18.9178 19.8724 18.4297L27.8273 10.4747ZM0.0234374 10.8408L26.9434 10.8408L26.9434 8.34082L0.0234376 8.34082L0.0234374 10.8408Z" fill="white"/>
+      </svg>
+
   </div>
 </div>
