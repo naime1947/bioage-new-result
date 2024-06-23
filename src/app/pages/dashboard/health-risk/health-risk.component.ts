@@ -16,19 +16,35 @@ export class HealthRiskComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
       gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.section-health-risk', {
+        opacity: 0,
+        //scale: 2,
+        scaleX: "2",
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.section-health-risk',
+          scroller: 'body',
+          start: "top 80%",
+          end: "top 50%",
+          scrub: true,
+          markers: true
+        }
+      })
+
       gsap.from('.section-health-risk .td-girl', {
         y: -50,
-        opacity: 0,
-        scale: 0.5,
+        //opacity: 0,
+        //scale: 5,
         duration: 2,
-        paused: true,
+        paused: false,
         scrollTrigger: {
           trigger: '.section-health-risk .td-girl',
           scroller: 'body',
-          markers: true,
           start: "top 80%",
           end: "top 40%",
           scrub: true,
+          markers: false
         }
       });
   }

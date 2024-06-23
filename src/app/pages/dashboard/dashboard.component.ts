@@ -17,6 +17,9 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { slideInLeft, slideInRight } from '../../shared/animation';
 import { HowVideoComponent } from './how-video/how-video.component';
 import { LearnHowComponent } from './learn-how/learn-how.component';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import SplitType from 'split-type';
 
 @Component({
   selector: 'app-dashboard',
@@ -31,7 +34,7 @@ import { LearnHowComponent } from './learn-how/learn-how.component';
     ImproveBioageComponent,
     NextBioageComponent,
     HowVideoComponent,
-    LearnHowComponent
+    LearnHowComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -65,10 +68,47 @@ export class DashboardComponent implements AfterViewInit {
     // }, 5000)
   }
 
-
   ngAfterViewInit(): void {
+    gsap.registerPlugin(ScrollTrigger);
 
-  }
+
+
+    //title and Subtitle
+    const titleSplit = SplitType.create('.page-title', {types: 'chars'});
+    gsap.fromTo(titleSplit.chars, {
+      y: 50,
+      opacity: 0,
+      scale: 1.2
+    }, {
+      y:0,
+      scale: 1,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 2,
+      ease: 'power4.out',
+    });
+
+  //   gsap.fromTo(
+  //     'body',
+  //     {
+  //       y: -30
+  //     },
+  //     {
+  //       y: "30vh",
+  //           scrollTrigger: {
+  //               trigger: '.how-video',
+  //               scrub: true,
+  //               start: "top bottom", // position of trigger meets the scroller position
+  //               snap: {
+  //                   snapTo: 0.5, // 0.5 'cause the scroll animation range is 200vh for parallax effect
+  //                   duration: 1,
+  //                   ease: 'power4.inOut'
+  //               }
+  //           },
+  //           ease: 'none'
+  //       }
+  //   );
+   }
 
   getRandomInt(min: number, max: number) {
     min = Math.ceil(min);

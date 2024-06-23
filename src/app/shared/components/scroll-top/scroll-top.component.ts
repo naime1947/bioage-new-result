@@ -6,6 +6,7 @@ import { Component, OnInit, Inject, HostListener } from '@angular/core';
   selector: 'app-scroll-top',
   standalone: true,
   imports: [CommonModule],
+  providers: [Document],
   templateUrl: './scroll-top.component.html',
   styleUrl: './scroll-top.component.scss'
 })
