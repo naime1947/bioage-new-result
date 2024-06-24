@@ -17,59 +17,36 @@ export class HealthRiskComponent implements AfterViewInit{
   ngAfterViewInit(): void {
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from('.section-health-risk .section-title', {
+      let heading = '.section-health-risk .section-title, .section-health-risk .section-description';
+      gsap.from(heading,{
         opacity: 0,
-        y:-50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.section-health-risk .section-description',
-          scroller: 'body',
-          start: "top 90%",
-          end: "top 50%",
-          scrub: true,
-          markers: false
-        }
-      })
-
-      gsap.from('.section-health-risk .section-description', {
-        opacity: 0,
-        y:50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.section-health-risk .section-description',
-          scroller: 'body',
-          start: "top 90%",
-          end: "top 50%",
-          scrub: true,
-          markers: false
-        }
-      })
-
-      gsap.from('.section-health-risk .wrapper.desktop-block', {
-        opacity: 0,
+        x:200,
         duration: 2,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: heading,
+          start: "top 75%",
+          end: "top 40%",
+          scrub: true,
+        }
+      })
+
+
+      let girlsSections = '.section-health-risk .wrapper.desktop-block, .section-health-risk .wrapper.mobile-block';
+
+      gsap.from(girlsSections, {
+        opacity: 0,
+        x: -200,
+        duration: 1,
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: '.section-health-risk .wrapper.desktop-block',
           scroller: 'body',
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 60%",
+          end: "top 40%",
           scrub: true,
           markers: false
         }
       })
-
-      gsap.from('.section-health-risk .wrapper.mobile-block', {
-        opacity: 0,
-        duration: 2,
-        scrollTrigger: {
-          trigger: '.section-health-risk .wrapper.mobile-block',
-          scroller: 'body',
-          start: "top 90%",
-          end: "top 50%",
-          scrub: true,
-          markers: false
-        }
-      })
-
   }
 }
