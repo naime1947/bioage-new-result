@@ -20,7 +20,7 @@ export class HealthRiskComponent implements AfterViewInit{
       gsap.from('.section-health-risk', {
         opacity: 0,
         //scale: 2,
-        scaleX: "2",
+        y:100,
         duration: 2,
         scrollTrigger: {
           trigger: '.section-health-risk',
@@ -28,24 +28,24 @@ export class HealthRiskComponent implements AfterViewInit{
           start: "top 80%",
           end: "top 50%",
           scrub: true,
-          markers: true
+          markers: false
         }
       })
 
-      gsap.from('.section-health-risk .td-girl', {
-        y: -50,
-        //opacity: 0,
-        //scale: 5,
-        duration: 2,
-        paused: false,
-        scrollTrigger: {
-          trigger: '.section-health-risk .td-girl',
-          scroller: 'body',
-          start: "top 80%",
-          end: "top 40%",
-          scrub: true,
-          markers: false
-        }
-      });
+      // gsap.from('.section-health-risk .td-girl', {
+      //   y: -50,
+      //   //opacity: 0,
+      //   //scale: 5,
+      //   duration: 2,
+      //   paused: false,
+      //   scrollTrigger: {
+      //     trigger: '.section-health-risk .td-girl',
+      //     scroller: 'body',
+      //     start: "top 80%",
+      //     end: "top 40%",
+      //     scrub: true,
+      //     markers: false
+      //   }
+      // });
   }
 }
