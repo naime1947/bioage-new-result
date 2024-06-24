@@ -73,42 +73,56 @@ export class DashboardComponent implements AfterViewInit {
 
 
 
-    //title and Subtitle
-    const titleSplit = SplitType.create('.page-title', {types: 'chars'});
-    gsap.fromTo(titleSplit.chars, {
-      y: 50,
-      opacity: 0,
-      scale: 1.2
-    }, {
-      y:0,
-      scale: 1,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 2,
-      ease: 'power4.out',
-    });
+    ScrollTrigger.create({
+      trigger: ".how-video",
+      start: "top top",
 
-  //   gsap.fromTo(
-  //     'body',
-  //     {
-  //       y: -30
-  //     },
-  //     {
-  //       y: "30vh",
-  //           scrollTrigger: {
-  //               trigger: '.how-video',
-  //               scrub: true,
-  //               start: "top bottom", // position of trigger meets the scroller position
-  //               snap: {
-  //                   snapTo: 0.5, // 0.5 'cause the scroll animation range is 200vh for parallax effect
-  //                   duration: 1,
-  //                   ease: 'power4.inOut'
-  //               }
-  //           },
-  //           ease: 'none'
-  //       }
-  //   );
-   }
+      pin: ".how-video",
+      pinSpacing: false,
+      preventOverlaps: true,
+      markers: false
+    })
+
+    //title and Subtitle
+    const titleSplit = SplitType.create('.page-title', { types: 'chars' });
+    gsap.fromTo(
+      titleSplit.chars,
+      {
+        y: 50,
+        opacity: 0,
+        scale: 1.2,
+      },
+      {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 2,
+        ease: 'power4.out',
+      }
+    );
+
+    //   gsap.fromTo(
+    //     'body',
+    //     {
+    //       y: -30
+    //     },
+    //     {
+    //       y: "30vh",
+    //           scrollTrigger: {
+    //               trigger: '.how-video',
+    //               scrub: true,
+    //               start: "top bottom", // position of trigger meets the scroller position
+    //               snap: {
+    //                   snapTo: 0.5, // 0.5 'cause the scroll animation range is 200vh for parallax effect
+    //                   duration: 1,
+    //                   ease: 'power4.inOut'
+    //               }
+    //           },
+    //           ease: 'none'
+    //       }
+    //   );
+  }
 
   getRandomInt(min: number, max: number) {
     min = Math.ceil(min);
