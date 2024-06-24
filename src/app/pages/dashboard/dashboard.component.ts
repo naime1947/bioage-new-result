@@ -71,8 +71,7 @@ export class DashboardComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
 
-
-
+    //paralax effect for how video
     ScrollTrigger.create({
       trigger: ".how-video",
       start: "top top",
@@ -102,26 +101,7 @@ export class DashboardComponent implements AfterViewInit {
       }
     );
 
-    //   gsap.fromTo(
-    //     'body',
-    //     {
-    //       y: -30
-    //     },
-    //     {
-    //       y: "30vh",
-    //           scrollTrigger: {
-    //               trigger: '.how-video',
-    //               scrub: true,
-    //               start: "top bottom", // position of trigger meets the scroller position
-    //               snap: {
-    //                   snapTo: 0.5, // 0.5 'cause the scroll animation range is 200vh for parallax effect
-    //                   duration: 1,
-    //                   ease: 'power4.inOut'
-    //               }
-    //           },
-    //           ease: 'none'
-    //       }
-    //   );
+
   }
 
   getRandomInt(min: number, max: number) {
