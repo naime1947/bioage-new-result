@@ -50,7 +50,7 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
     let tl = gsap.timeline();
     tl.from('.img-container', {
       scale: 0.8,
-      //opacity: 0,
+      opacity: 0,
       duration: 1,
       stagger: 1,
       scrollTrigger: {
