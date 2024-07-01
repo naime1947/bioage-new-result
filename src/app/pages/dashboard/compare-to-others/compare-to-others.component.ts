@@ -49,8 +49,8 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
 
     let tl = gsap.timeline();
     tl.from('.img-container', {
-      scale: 0.5,
-      opacity: 0,
+      scale: 0.8,
+      //opacity: 0,
       duration: 1,
       stagger: 1,
       scrollTrigger: {
@@ -65,14 +65,14 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
 
     tl.from('.slider-wrapper', {
       opacity: 0,
-      y: 100,
+      y: 50,
       duration: 1,
       delay: 1,
       scrollTrigger: {
         trigger: '.slider-wrapper',
         scroller: 'body',
-        start: 'top 60%',
-        end: 'top 40%',
+        start: 'top 80%',
+        end: 'top 50%',
         scrub: true,
         markers: false,
       },
