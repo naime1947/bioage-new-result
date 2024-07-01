@@ -25,7 +25,7 @@ export class HealthRiskComponent implements AfterViewInit{
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: heading,
-          start: "top 75%",
+          start: "top 60%",
           end: "top 40%",
           scrub: true,
         }
