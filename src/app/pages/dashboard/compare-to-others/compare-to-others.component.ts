@@ -53,12 +53,13 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
       opacity: 0,
       duration: 2,
       stagger: 1,
+      ease: "back.inOut",
       scrollTrigger: {
         trigger: '.img-container',
         scroller: 'body',
         start: 'top 80%',
         end: 'top 40%',
-        scrub: true,
+        scrub: 1.5,
         markers: false,
       },
     });
@@ -67,12 +68,13 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
       opacity: 0,
       y: 20,
       duration: 1,
+      ease: "back.inOut",
       scrollTrigger: {
         trigger: '.slider-wrapper',
         scroller: 'body',
         start: 'top 80%',
         end: 'top 50%',
-        scrub: true,
+        scrub: 2,
         markers: false,
       },
     })

@@ -75,7 +75,6 @@ export class DashboardComponent implements AfterViewInit {
     ScrollTrigger.create({
       trigger: ".how-video",
       start: "top top",
-
       pin: ".how-video",
       pinSpacing: false,
       preventOverlaps: true,

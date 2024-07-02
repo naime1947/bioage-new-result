@@ -26,9 +26,9 @@ export class WhatThisMeanComponent implements AfterViewInit {
         ease: "expo.inOut",
         scrollTrigger: {
           trigger: ".each-info-circle .circle",
-          start: "top 60%",
+          start: "top 80%",
           end: "top 40%",
-          scrub: true,
+          scrub: 1.5,
           markers: false
         }
       })
@@ -42,7 +42,7 @@ export class WhatThisMeanComponent implements AfterViewInit {
           trigger: ".each-info-circle .circle",
           start: "top 80%",
           end: "top 40%",
-          scrub: true,
+          scrub: 1.5,
           markers: false
         }
       })
@@ -56,7 +56,7 @@ export class WhatThisMeanComponent implements AfterViewInit {
           trigger: ".each-info-circle .circle",
           start: "top 80%",
           end: "top 40%",
-          scrub: true,
+          scrub: 1.5,
           markers: false
         }
       })
