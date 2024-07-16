@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="slider">
-    <div [@flyInDown] [@heartBeat] *ngIf="ageDifference == 0" class="your-age">
+    <div  *ngIf="ageDifference == 0" class="your-age">
       <p class="text-center">Your BioAge</p>
       <div class="heart">
         <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,8 +77,7 @@
     </div>
 
     <div
-      [@flyInUp]
-      [@heartBeat]
+
       class="your-age"
     >
       <div class="heart">

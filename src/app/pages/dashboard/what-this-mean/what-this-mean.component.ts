@@ -16,49 +16,49 @@ export class WhatThisMeanComponent implements AfterViewInit {
 
 
   ngAfterViewInit(): void {
-      gsap.registerPlugin(ScrollTrigger);
+      // gsap.registerPlugin(ScrollTrigger);
 
-      let tl = gsap.timeline();
-      tl.from('.circle.first', {
-        x: -100,
-        opacity: 0,
-        duration: 1,
-        ease: "expo.inOut",
-        scrollTrigger: {
-          trigger: ".each-info-circle .circle",
-          start: "top 80%",
-          end: "top 40%",
-          scrub: 1.5,
-          markers: false
-        }
-      })
+      // let tl = gsap.timeline();
+      // tl.from('.circle.first', {
+      //   x: -100,
+      //   opacity: 0,
+      //   duration: 1,
+      //   ease: "expo.inOut",
+      //   scrollTrigger: {
+      //     trigger: ".each-info-circle .circle",
+      //     start: "top 80%",
+      //     end: "top 40%",
+      //     scrub: 1.5,
+      //     markers: false
+      //   }
+      // })
 
-      tl.from('.circle.selected', {
-        scale: 0.5,
-        opacity: 0,
-        duration: 2,
-        ease: "expo.inOut",
-        scrollTrigger: {
-          trigger: ".each-info-circle .circle",
-          start: "top 80%",
-          end: "top 40%",
-          scrub: 1.5,
-          markers: false
-        }
-      })
+      // tl.from('.circle.selected', {
+      //   scale: 0.5,
+      //   opacity: 0,
+      //   duration: 2,
+      //   ease: "expo.inOut",
+      //   scrollTrigger: {
+      //     trigger: ".each-info-circle .circle",
+      //     start: "top 80%",
+      //     end: "top 40%",
+      //     scrub: 1.5,
+      //     markers: false
+      //   }
+      // })
 
-      tl.from('.circle.last', {
-        x: 100,
-        opacity: 0,
-        duration: 2,
-        ease: "expo.inOut",
-        scrollTrigger: {
-          trigger: ".each-info-circle .circle",
-          start: "top 80%",
-          end: "top 40%",
-          scrub: 1.5,
-          markers: false
-        }
-      })
+      // tl.from('.circle.last', {
+      //   x: 100,
+      //   opacity: 0,
+      //   duration: 2,
+      //   ease: "expo.inOut",
+      //   scrollTrigger: {
+      //     trigger: ".each-info-circle .circle",
+      //     start: "top 80%",
+      //     end: "top 40%",
+      //     scrub: 1.5,
+      //     markers: false
+      //   }
+      // })
   }
 }

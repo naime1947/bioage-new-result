@@ -33,7 +33,6 @@ export class HeaderComponent implements AfterViewInit{
   isCollapsed = true;
   constructor(private authService: AuthService) {}
   handleClick(dropdown: any) {
-    console.log(dropdown);
   }
 
   logout() {
@@ -41,11 +40,11 @@ export class HeaderComponent implements AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-      gsap.from(".navbar-brand", {
-        opacity: 0,
-        y: -50,
-        duration: 2,
-        ease: "expo.inOut"
-      })
+      // gsap.from(".navbar-brand", {
+      //   opacity: 0,
+      //   y: -50,
+      //   duration: 2,
+      //   ease: "expo.inOut"
+      // })
   }
 }

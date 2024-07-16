@@ -15,40 +15,40 @@ export class HealthRiskComponent implements AfterViewInit{
   @Input() latestAssessmentResult!: AssessmentResultModel;
 
   ngAfterViewInit(): void {
-      gsap.registerPlugin(ScrollTrigger);
+      // gsap.registerPlugin(ScrollTrigger);
 
-      let heading = '.section-health-risk .section-title, .section-health-risk .section-description';
-      gsap.from(heading,{
-        opacity: 0,
-        y:150,
-        skewY: 20,
-        stagger: 0.8,
-        duration: 2,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: heading,
-          start: "top 60%",
-          end: "top 40%",
-          scrub: .5,
-        }
-      })
+      // let heading = '.section-health-risk .section-title, .section-health-risk .section-description';
+      // gsap.from(heading,{
+      //   opacity: 0,
+      //   y:150,
+      //   skewY: 20,
+      //   stagger: 0.8,
+      //   duration: 2,
+      //   ease: "power1.inOut",
+      //   scrollTrigger: {
+      //     trigger: heading,
+      //     start: "top 60%",
+      //     end: "top 40%",
+      //     scrub: .5,
+      //   }
+      // })
 
 
-      let girlsSections = '.section-health-risk .wrapper.desktop-block, .section-health-risk .wrapper.mobile-block';
+      // let girlsSections = '.section-health-risk .wrapper.desktop-block, .section-health-risk .wrapper.mobile-block';
 
-      gsap.from(girlsSections, {
-        opacity: 0,
-        x: -100,
-        duration: 1,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: '.section-health-risk .wrapper.desktop-block',
-          scroller: 'body',
-          start: "top 60%",
-          end: "top 40%",
-          scrub: true,
-          markers: false
-        }
-      })
+      // gsap.from(girlsSections, {
+      //   opacity: 0,
+      //   x: -100,
+      //   duration: 1,
+      //   ease: "power1.inOut",
+      //   scrollTrigger: {
+      //     trigger: '.section-health-risk .wrapper.desktop-block',
+      //     scroller: 'body',
+      //     start: "top 60%",
+      //     end: "top 40%",
+      //     scrub: true,
+      //     markers: false
+      //   }
+      // })
   }
 }

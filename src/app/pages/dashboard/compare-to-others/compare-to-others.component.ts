@@ -45,39 +45,39 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    let tl = gsap.timeline();
-    tl.from('.img-container', {
-      scale: 0.8,
-      opacity: 0,
-      duration: 2,
-      stagger: 1,
-      ease: "back.inOut",
-      scrollTrigger: {
-        trigger: '.img-container',
-        scroller: 'body',
-        start: 'top 80%',
-        end: 'top 40%',
-        scrub: 1.5,
-        markers: false,
-      },
-    });
+    // let tl = gsap.timeline();
+    // tl.from('.img-container', {
+    //   scale: 0.8,
+    //   opacity: 0,
+    //   duration: 2,
+    //   stagger: 1,
+    //   ease: "back.inOut",
+    //   scrollTrigger: {
+    //     trigger: '.img-container',
+    //     scroller: 'body',
+    //     start: 'top 80%',
+    //     end: 'top 40%',
+    //     scrub: 1.5,
+    //     markers: false,
+    //   },
+    // });
 
-    tl.from('.slider-wrapper', {
-      opacity: 0,
-      y: 20,
-      duration: 1,
-      ease: "back.inOut",
-      scrollTrigger: {
-        trigger: '.slider-wrapper',
-        scroller: 'body',
-        start: 'top 80%',
-        end: 'top 50%',
-        scrub: 2,
-        markers: false,
-      },
-    })
+    // tl.from('.slider-wrapper', {
+    //   opacity: 0,
+    //   y: 20,
+    //   duration: 1,
+    //   ease: "back.inOut",
+    //   scrollTrigger: {
+    //     trigger: '.slider-wrapper',
+    //     scroller: 'body',
+    //     start: 'top 80%',
+    //     end: 'top 50%',
+    //     scrub: 2,
+    //     markers: false,
+    //   },
+    // })
   }
 
 

@@ -69,36 +69,36 @@ export class DashboardComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    //paralax effect for how video
-    ScrollTrigger.create({
-      trigger: ".how-video",
-      start: "top top",
-      pin: ".how-video",
-      pinSpacing: false,
-      preventOverlaps: true,
-      markers: false
-    })
+    // //paralax effect for how video
+    // ScrollTrigger.create({
+    //   trigger: ".how-video",
+    //   start: "top top",
+    //   pin: ".how-video",
+    //   pinSpacing: false,
+    //   preventOverlaps: true,
+    //   markers: false
+    // })
 
-    //title and Subtitle
-    const titleSplit = SplitType.create('.page-title', { types: 'chars' });
-    gsap.fromTo(
-      titleSplit.chars,
-      {
-        y: 50,
-        opacity: 0,
-        scale: 1.2,
-      },
-      {
-        y: 0,
-        scale: 1,
-        opacity: 1,
-        stagger: 0.05,
-        duration: 2,
-        ease: 'power4.out',
-      }
-    );
+    // //title and Subtitle
+    // const titleSplit = SplitType.create('.page-title', { types: 'chars' });
+    // gsap.fromTo(
+    //   titleSplit.chars,
+    //   {
+    //     y: 50,
+    //     opacity: 0,
+    //     scale: 1.2,
+    //   },
+    //   {
+    //     y: 0,
+    //     scale: 1,
+    //     opacity: 1,
+    //     stagger: 0.05,
+    //     duration: 2,
+    //     ease: 'power4.out',
+    //   }
+    // );
 
 
   }

@@ -66,31 +66,31 @@ export class AgeGapBannerComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    let tl = gsap.timeline();
+    // let tl = gsap.timeline();
 
-    for(let i=1; i<=6; i++){
-      tl.from(`.brick.bg-${i}` , {
-        x: -50,
-        skewY: -20,
-        opacity: 0,
-        duration: 0.2,
-      })
-    }
+    // for(let i=1; i<=6; i++){
+    //   tl.from(`.brick.bg-${i}` , {
+    //     x: -50,
+    //     skewY: -20,
+    //     opacity: 0,
+    //     duration: 0.2,
+    //   })
+    // }
 
 
-    gsap.from('.summary', {
-      x: -200,
-      opacity: 0,
-      duration: 1.5,
-      ease: "power1.inOut"
-    })
+    // gsap.from('.summary', {
+    //   x: -200,
+    //   opacity: 0,
+    //   duration: 1.5,
+    //   ease: "power1.inOut"
+    // })
 
-    gsap.from('.description', {
-      x: 200,
-      opacity: 0,
-      duration: 1.5,
-      ease: "power1.inOut"
-    })
+    // gsap.from('.description', {
+    //   x: 200,
+    //   opacity: 0,
+    //   duration: 1.5,
+    //   ease: "power1.inOut"
+    // })
   }
 
 

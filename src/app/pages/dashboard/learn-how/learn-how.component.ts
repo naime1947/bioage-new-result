@@ -16,9 +16,9 @@ export class LearnHowComponent implements AfterViewInit {
   selectedBtn: BtnEnum = this.btnEnum.ImproveYourDiet;
 
   ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('', {
+    // gsap.registerPlugin(ScrollTrigger);
+    // gsap.from('', {
 
-    });
+    // });
   }
 }
