@@ -70,10 +70,10 @@ export class AgeGapBannerComponent implements OnInit, OnChanges, AfterViewInit {
 
     for(let i=1; i<=6; i++){
       tl.from(`.brick.bg-${i}` , {
-        x: -500,
+        x: -50,
+        skewY: -20,
         opacity: 0,
         duration: 0.2,
-        ease: "power2.inOut"
       })
     }
 

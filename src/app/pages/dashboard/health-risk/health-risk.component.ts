@@ -20,14 +20,16 @@ export class HealthRiskComponent implements AfterViewInit{
       let heading = '.section-health-risk .section-title, .section-health-risk .section-description';
       gsap.from(heading,{
         opacity: 0,
-        x:100,
+        y:150,
+        skewY: 20,
+        stagger: 0.8,
         duration: 2,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: heading,
           start: "top 60%",
           end: "top 40%",
-          scrub: true,
+          scrub: .5,
         }
       })
 
