@@ -3,7 +3,14 @@ import {
   NgxSliderModule,
   Options,
 } from '@angular-slider/ngx-slider';
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { GirlSvgComponent } from './girl-svg/girl-svg.component';
 import { CommonModule } from '@angular/common';
 import { AssessmentResultModel } from '../../../models/assessment-result.model';
@@ -40,13 +47,20 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
   selectedGirlWidth = this.girlWidth * 1.26;
   selectedGrilNum = 8;
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
   ngOnInit(): void {
     this.setGirlWidth(window.innerWidth);
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.setGirlWidth(window.innerWidth);
+    location.reload();
+  }
+
   ngAfterViewInit(): void {
     // gsap.registerPlugin(ScrollTrigger);
-
     // let tl = gsap.timeline();
     // tl.from('.img-container', {
     //   scale: 0.8,
@@ -63,7 +77,6 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
     //     markers: false,
     //   },
     // });
-
     // tl.from('.slider-wrapper', {
     //   opacity: 0,
     //   y: 20,
@@ -80,12 +93,16 @@ export class CompareToOthersComponent implements OnInit, AfterViewInit {
     // })
   }
 
-
-
   setGirlWidth(screenWidth: number) {
     console.log(innerWidth);
-    if (screenWidth > 991) {
+    if (screenWidth > 1390) {
       this.girlWidth = 83;
+      this.selectedGirlWidth = this.girlWidth * 1.26;
+    } else if (screenWidth < 1391 && screenWidth > 1190) {
+      this.girlWidth = 74;
+      this.selectedGirlWidth = this.girlWidth * 1.26;
+    } else if (screenWidth < 1191 && screenWidth > 990) {
+      this.girlWidth = 60;
       this.selectedGirlWidth = this.girlWidth * 1.26;
     } else if (screenWidth < 992 && screenWidth > 574) {
       this.girlWidth = 48;
